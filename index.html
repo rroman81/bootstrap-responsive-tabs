@@ -136,20 +136,24 @@
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script>
+        $.noConflict();
+    </script>
     <script src="js/responsive-tabs.js"></script>
     <script type="text/javascript">
-      $('#myTab a').click(function (e) {
+      jQuery('#myTab a').click(function (e) {
         e.preventDefault()
-        $(this).tab('show')
+        jQuery(this).tab('show')
       });
 
-      $('#moreTabs a').click(function (e) {
+      jQuery('#moreTabs a').click(function (e) {
         e.preventDefault()
-        $(this).tab('show')
+        jQuery(this).tab('show')
       });
+
       (function($) {
           fakewaffle.responsiveTabs(['xs', 'sm']);
-      })(jQuery);
+      }(jQuery));
 
     </script>
     <script>
